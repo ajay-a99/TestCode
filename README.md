@@ -1,1 +1,1 @@
-#Hi this is the repo for teting my personal code.
+#Hi this is the repo for testing my personal code.
