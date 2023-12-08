@@ -1,6 +1,4 @@
 import turtle 
-
-##code with turtleee- will be written here soon
-#edited in bitbucket
+#turtle code will be added here
 
 #hey additional text
