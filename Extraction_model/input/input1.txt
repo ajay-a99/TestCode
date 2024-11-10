@@ -1,0 +1,17 @@
+					DRIVING LICENSE
+
+
+
+NAME 	: 	A. UNKOWN USER				USER EMAIL 	: abcde@gmail.com
+
+
+DOB	:	01/02/2021				PHONE	: 9876543210	
+
+
+UNIQUE ID 	:	UN2024US2024
+
+VALID FROM 	: 	2024 - 2030
+
+TYPE		:	Car 
+
+CENTRE EMAIL	:	abc_centre@yxyxy.com
