@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Input Page</title>
+</head>
+<body>
+    <form action="{{ url_for('weather_update') }}" method="post">
+        <label for="weather_value">Enter a city to know the weather updates:</label>
+        <input type="text" id="weather_value" name="weather_value">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
