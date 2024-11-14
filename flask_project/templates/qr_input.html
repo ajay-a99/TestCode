@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Input Page</title>
+</head>
+<body>
+    <form action="{{ url_for('display_qr') }}" method="post">
+        <label for="qr_value">Enter the text to generate QR</label>
+        <input type="text" id="qr_value" name="qr_value">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

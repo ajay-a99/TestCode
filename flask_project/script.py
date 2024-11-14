@@ -9,7 +9,7 @@ def joke():
 
 def qr_generator(text):
     img = qrcode.make(text)
-    img.save("qr_code.png")
+    img.save("qr_code.jpg")
 
 def time(value1):
     UTC = pytz.utc 
@@ -30,12 +30,4 @@ def calculate_weight_on_planets(weight_on_earth):
         "Pluto": 0.06
     }
     weights_on_planets = {planet: int(weight_on_earth) * factor for planet, factor in gravity_factors.items()}
-    print(weights_on_planets,'***********************')
     return weights_on_planets
-
-# Example usage
-# weight_on_earth = 70  # weight in kg
-# weights = calculate_weight_on_planets(weight_on_earth)
-
-# for planet, weight in weights.items():
-#     print(f"Weight on {planet}: {weight:.2f} kg")

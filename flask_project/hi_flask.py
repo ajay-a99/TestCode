@@ -53,6 +53,16 @@ def weather_update():
 def display(current_time,entered_time):
     return render_template('display_time.html', current_time=current_time,entered_time = entered_time)
 
+@app.route('/qr')
+def qr_input():
+   return render_template('qr_input.html')
+
+@app.route('/qr_value', methods=['POST'])
+def display_qr():
+   qr_text = request.form['qr_value']
+   script.qr_generator(qr_text)
+   return render_template('display_qr.html')
+
 if __name__ == '__main__':
    app.run()
 
