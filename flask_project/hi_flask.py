@@ -3,6 +3,7 @@ import pyjokes
 import script
 
 joke = script.joke()
+weight_dict={}
 app = Flask(__name__)
  
 @app.route('/')
@@ -11,7 +12,7 @@ def home():
 
 @app.route('/html1')
 def home_1():
-   return render_template('hi_1.html')
+   return render_template('hi_1.html') 
 
 @app.route('/weather')
 def weather():
@@ -20,6 +21,22 @@ def weather():
 @app.route('/jokes')
 def jokes():
    return render_template('display_joke.html',joke = joke)
+
+@app.route('/weight')
+def weight():
+   return render_template('weight_input.html')
+
+@app.route('/weightvalue', methods=['POST'])
+def weight_values():
+   weight = request.form['weight']
+   return redirect(url_for('display_weight',weight = weight))
+
+@app.route('/displayweight/<weight>')
+def display_weight(weight):
+    weight_dict = script.calculate_weight_on_planets(weight)
+    return render_template('display_weight.html', mercury=weight_dict.get('Mercury',''),venus = weight_dict.get('Venus',''),mars=weight_dict.get('Mars',''),
+                           jupiter=weight_dict.get('Jupiter',''),saturn=weight_dict.get('Saturn',''),uranus=weight_dict.get('Uranus',''),
+                           neptune=weight_dict.get('Neptune',''),pluto=weight_dict.get('Pluto',''))
 
 @app.route('/submit', methods=['POST'])
 def submit():

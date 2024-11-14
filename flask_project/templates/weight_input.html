@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Page</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body {
+        background-image: url('https://th.bing.com/th?id=OIP.TXIyqyJCfYzRsG_wI2c0TQHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2');
+      }
+      label {
+        color:skyblue;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('weight_values') }}" method="post">
+        <label for="weight">Enter your weight:</label>
+        <input type="text" id="weight" name="weight">
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
